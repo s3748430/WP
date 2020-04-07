@@ -1,7 +1,44 @@
 p + p { 
-    color: purple; 
+    color: blue; 
 }
 
 p + p + p { 
     color: red; 
+}
+
+a:link{
+    color: darkred;
+}
+
+a:visited {
+    color: pink;
+}
+
+
+a:hover {
+    color: green;
+}
+
+a:active{
+    color: red;
+}
+
+ol li:first-child {
+    color: red;
+}
+
+ol li:last-child{
+    color: green;
+}
+
+ol li:nth-child(even){
+    color: blue;
+}
+
+table{
+    border-collapse:collapse ;
+}
+
+table, td, th{
+    border: 1px solid;
 }
