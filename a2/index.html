@@ -18,9 +18,25 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 
   <style>
-    #parallax-image{
-      background-image: url(C:\MAMP\htdocs\WP\a2\3b4facdf04c5dcb2930c3177ab966dce.jpg);
-      height: 500px;
+    .parallax {
+      /* The image used */
+      background-image: url("parallax.jpg");
+
+      /* Set a specific height */
+      min-height: 500px;
+      margin-bottom: 50px;
+
+      /* Create the parallax scrolling effect */
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    .h1 {
+      font-family: Cosmic Sans MS, Cosmic Sans, cursive;
+      color: black;
+      font-size: 50px;
     }
   </style>
 </head>
@@ -49,17 +65,65 @@
       </li>
     </ul>
   </nav>
-
+  <!--Under construction image-->
   <main>
     <article>
       <div class="d-flex justify-content-center" style="background-color: black;">
         <img src="C:\MAMP\htdocs\WP\a2\maintenance-2422173_960_720.png" alt="construction panel">
     </article>
 
+    <!--displaying about us section with parallax effect-->
+
     <article>
-      <div id = "parallax-image">
-        
+      <div class="parallax">
+        <div class="row h-100">
+          <div class="col-md-12 align-self-center">
+            <h1 class="text-center">Welcome to Cinemax</h1>
+          </div>
+        </div>
       </div>
+
+      <div class="container">
+        <p>Cinemax Cinemas is a local owned and operated independent theatre company in the Can Tho market. Cinemax
+          Cinemas is dedicated to providing the best movie presentation, amenities, concession products, and movie
+          theatre prices around. With all digital and Real D 3D screens, Atlas Cinemas features the most diverse viewing
+          options, with alternative content such as independent and foreign films, and all the best that Hollywood has
+          to offer.</p>
+        <img src="C:\MAMP\htdocs\WP\a2\about_us_1.jpg" alt="about us">
+      </div>
+
+      <div class="parallax">
+        <div class="row h-100">
+          <div class="col-md-12 align-self-center">
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <p>After years of operating and closing smaller movie houses, Cinemax Cinemas built its first brand new
+          multiplex in Spring 2020. Seated in a new development in Ninh Kieu District, Can Tho city, the first Cinemax
+          theatre
+          opened with 12 screens and modern amenities. This brand new theater boasts 3 Real D XL auditoriums,
+          and thanks to seating upgrades in Spring 2020, entire Cinemax theater provides
+          full luxury seated theater with all recliners first class seats along with the standard one in the 12 original
+          theaters.
+        </p>
+        <img src="theater.jpg" alt="theater" style="justify-content: center;">
+        
+
+      </div>
+
+      <div class="parallax">
+        <div class="row h-100">
+          <div class="col-md-12 align-self-center">
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <p>With the support of </p>
+      </div>
+
     </article>
   </main>
 
