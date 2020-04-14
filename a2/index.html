@@ -8,7 +8,7 @@
 
   <!-- Keep wireframe.css for debugging, add your css to style.css -->
   <link id='wireframecss' type="text/css" rel="stylesheet" href="../wireframe.css" disabled>
-  <link id='stylecss' type="text/css" rel="stylesheet" href="../style.css">
+  <link id='stylecss' type="text/css" rel="stylesheet" href="style.css">
 
   <script src='../wireframe.js'></script>
   <!--import the bootstrap-->
@@ -17,28 +17,6 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 
-  <style>
-    .parallax {
-      /* The image used */
-      background-image: url("parallax.jpg");
-
-      /* Set a specific height */
-      min-height: 500px;
-      margin-bottom: 50px;
-
-      /* Create the parallax scrolling effect */
-      background-attachment: fixed;
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
-    }
-
-    .h1 {
-      font-family: Cosmic Sans MS, Cosmic Sans, cursive;
-      color: black;
-      font-size: 50px;
-    }
-  </style>
 </head>
 
 <body>
@@ -50,33 +28,26 @@
         <img src="C:\MAMP\htdocs\WP\a2\Cinemax.svg.png" alt="cinemax logo" width="500">
       </div>
     </div>
-  </header>
 
-  <nav class="navbar navbar-expand-sm bg-light justify-content-center">
-    <ul class="navbar-nav">
-      <li class="nav-item">
-        <a class="nav-link" href="#">About us</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Prices</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Now showing</a>
-      </li>
-    </ul>
-  </nav>
-  <!--Under construction image-->
+    <!--Nav bar-->
+
+    <div>
+
+      <nav id="navbar">
+        <ul class="nav_links">
+          <li><a href="#aboutus">About us</a></li>
+          <li><a href="#prices">Prices</a></li>
+          <li><a href="#nowshowing">Now showing</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
   <main>
-    <article>
-      <div class="d-flex justify-content-center" style="background-color: black;">
-        <img src="C:\MAMP\htdocs\WP\a2\maintenance-2422173_960_720.png" alt="construction panel">
-        </div>
-    </article>
 
     <!--displaying About Us section with parallax effect-->
 
     <article
-      style="background-color:rgb(80, 128, 158); font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
+      id="aboutus" style="background-color:rgb(80, 128, 158); font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
       <div class="parallax">
         <div class="row h-100">
           <div class="col-md-12 align-self-center">
@@ -166,7 +137,7 @@
 
     <!--Now showing section-->
 
-    <article style="font-family: 'Times New Roman', Times, serif;">
+    <article style="font-family: 'Times New Roman', Times, serif;" id="nowshowing">
       <div class="container">
         <div class="row">
           <div class="col-sm-6">
@@ -177,77 +148,77 @@
                   <img style="width: 250px;" src="endgame.jpg" alt="">
                 </div>
                 <div class="col-sm">
-                  <h1 style="font-size: 20px;" >Avengers : Endgame  PG-13</h1>
+                  <h1 style="font-size: 20px;">Avengers : Endgame PG-13</h1>
                   <h1 style="font-size: 20px;">Wed 9PM</h1>
                   <h1 style="font-size: 20px;">Thu 9pm</h1>
                   <h1 style="font-size: 20px;">Fri 9pm</h1>
                   <h1 style="font-size: 20px;">Sat 6pm</h1>
                   <h1 style="font-size: 20px;">Sun 6pm</h1>
                 </div>
+              </div>
+
+              <!--Dumbo poster-->
+
+              <div class="card">
+                <div class="row">
+                  <div class="col-sm">
+                    <img style="width: 250px;" src="dumbo.jpg" alt="">
+                  </div>
+                  <div class="col-sm">
+                    <h1 style="font-size: 20px;">Dumbo PG</h1>
+                    <h1 style="font-size: 20px;">Mon 12pm</h1>
+                    <h1 style="font-size: 20px;">Tue 12pm</h1>
+                    <h1 style="font-size: 20px;">Wed 6pm</h1>
+                    <h1 style="font-size: 20px;">Thu 6pm</h1>
+                    <h1 style="font-size: 20px;">Fri 6pm</h1>
+                    <h1 style="font-size: 20px;">Sat 12pm</h1>
+                    <h1 style="font-size: 20px;">Sun 12pm</h1>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-6">
+            <!--Top End Wedding poster-->
+            <div class="card">
+              <div class="row">
+                <div class="col-sm">
+                  <img style="width: 250px;" src="topend.jpg" alt="">
+                </div>
+                <div class="col-sm">
+                  <h1 style="font-size: 20px;">Top End Wedding TV-14</h1>
+                  <h1 style="font-size: 20px;">Mon 6pm</h1>
+                  <h1 style="font-size: 20px;">Tue 6pm</h1>
+                  <h1 style="font-size: 20px;">Sat 3pm</h1>
+                  <h1 style="font-size: 20px;">Sun 3pm</h1>
+                </div>
+              </div>
             </div>
 
-            <!--Dumbo poster-->
+            <!--The Happy Prince Poster-->
 
             <div class="card">
               <div class="row">
                 <div class="col-sm">
-                  <img style="width: 250px;" src="dumbo.jpg" alt="">
+                  <img style="width: 250px;" src="happyprince.jpg" alt="">
                 </div>
                 <div class="col-sm">
-                  <h1 style="font-size: 20px;">Dumbo   PG</h1>
-                  <h1 style="font-size: 20px;">Mon 12pm</h1>
-                  <h1 style="font-size: 20px;">Tue 12pm</h1>
-                  <h1 style="font-size: 20px;">Wed 6pm</h1>
-                  <h1 style="font-size: 20px;">Thu 6pm</h1>
-                  <h1 style="font-size: 20px;">Fri 6pm</h1>
-                  <h1 style="font-size: 20px;">Sat 12pm</h1>
-                  <h1 style="font-size: 20px;">Sun 12pm</h1>
+                  <h1 style="font-size: 20px;">The Happy Prince R</h1>
+                  <h1 style="font-size: 20px;">Wed 12pm</h1>
+                  <h1 style="font-size: 20px;">Thu 12pm</h1>
+                  <h1 style="font-size: 20px;">Sat 9pm</h1>
+                  <h1 style="font-size: 20px;">Sun 9pm</h1>
                 </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-sm-6">
-          <!--Top End Wedding poster-->
-          <div class="card">
-            <div class="row">
-              <div class="col-sm">
-                <img style="width: 250px;" src="topend.jpg" alt="">
-              </div>
-              <div class="col-sm">
-                <h1 style="font-size: 20px;">Top End Wedding TV-14</h1>
-                <h1 style="font-size: 20px;">Mon 6pm</h1>
-                <h1 style="font-size: 20px;">Tue 6pm</h1>
-                <h1 style="font-size: 20px;">Sat 3pm</h1>
-                <h1 style="font-size: 20px;">Sun 3pm</h1>
-              </div>
-            </div>
-          </div>
-
-          <!--The Happy Prince Poster-->
-          
-          <div class="card">
-            <div class="row">
-              <div class="col-sm">
-                <img style="width: 250px;" src="happyprince.jpg" alt="">
-              </div>
-              <div class="col-sm">
-                <h1 style="font-size: 20px;">The Happy Prince  R</h1>
-                <h1 style="font-size: 20px;">Wed 12pm</h1>
-                <h1 style="font-size: 20px;">Thu 12pm</h1>
-                <h1 style="font-size: 20px;">Sat 9pm</h1>
-                <h1 style="font-size: 20px;">Sun 9pm</h1>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
     </article>
     <!--Price section-->
 
-    <article style="font-family: Georgia, 'Times New Roman', Times, serif;" s>
+    <article id="prices" style="font-family: Georgia, 'Times New Roman', Times, serif;" s>
       <div class="col-sm">
         <table class="table table-bordered table-striped">
           <tr>
@@ -306,7 +277,7 @@
         <h1>Avengers: Endgame</h1>
       </div>
       <div>
-        <img src='rating-pg-13.png' style="width:68px" alt='rating'/>
+        <img src='rating-pg-13.png' style="width:68px" alt='rating' />
       </div>
     </div>
     <section>
@@ -314,7 +285,8 @@
         <article>
           <p>
             <label>Plot description:</label>
-            <br>Adrift in space with no food or water, Tony Stark sends a message to Pepper Potts as his oxygen supply starts to dwindle.
+            <br>Adrift in space with no food or water, Tony Stark sends a message to Pepper Potts as his oxygen supply
+            starts to dwindle.
             <br>Meanwhile, the remaining Avengers: Thor, Black Widow, Captain America and Bruce Banner,
             <br>must figure out a way to bring back their vanquished allies for an epic showdown with Thanos,
             <br>the evil demigod who decimated the planet and the universe.
@@ -322,7 +294,8 @@
         </article>
       </div>
       <div>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/TcMBFSGVi1c" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/TcMBFSGVi1c"
+          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
       <div>
         <label> Make a Booking:</label>
@@ -335,13 +308,20 @@
         <a href=" " class="btn btn-outline-primary">22:00</a>
       </div>
     </section>
+
+    <!--Under construction image-->
+    <article>
+      <div class="d-flex justify-content-center" style="background-color: black;">
+        <img src="C:\MAMP\htdocs\WP\a2\maintenance-2422173_960_720.png" alt="construction panel">
+      </div>
+    </article>
   </main>
 
   <footer>
     <div>&copy;
       <script>
         document.write(new Date().getFullYear());
-      </script> Put your name(s), student number(s) and group name here. Last modified
+      </script> Nguyen Quang Minh - s3748430, Tran Trong Vy - s3764425. 17th April 2020
       <?= date ("Y F d  H:i", filemtime($_SERVER['SCRIPT_FILENAME'])); ?>.</div>
     <div>Disclaimer: This website is not a real website and is being developed as part of a School of Science Web
       Programming course at RMIT University in Melbourne, Australia.</div>
