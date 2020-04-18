@@ -16,6 +16,25 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.0.js" integrity="sha256-r/AaFHrszJtwpe+tHyNi/XCfMxYpbsRg2Uqn0x3s2zc="
+    crossorigin="anonymous"></script>
+  <script>// When the user scrolls the page, execute myFunction
+    window.onscroll = function () { myFunction() };
+
+    // Get the navbar
+    var navbar = document.getElementById("navbar");
+
+    // Get the offset position of the navbar
+    var sticky = navbar.offsetTop;
+
+    // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+    function myFunction() {
+      if (window.pageYOffset >= sticky) {
+        navbar.classList.add("sticky")
+      } else {
+        navbar.classList.remove("sticky");
+      }
+    }</script>
 
 </head>
 
@@ -31,16 +50,15 @@
 
     <!--Nav bar-->
 
-    <div>
-
-      <nav id="navbar">
-        <ul class="nav_links">
-          <li><a href="#aboutus">About us</a></li>
-          <li><a href="#prices">Prices</a></li>
-          <li><a href="#nowshowing">Now showing</a></li>
-        </ul>
+      <nav id="navbar" class="fixed-top">
+        <div class="menu">
+          <ul class="nav_links">
+            <li><a href="#aboutus">About us</a></li>
+            <li><a href="#prices">Prices</a></li>
+            <li><a href="#nowshowing">Now showing</a></li>
+          </ul>
+        </div>
       </nav>
-    </div>
   </header>
   <main>
 
@@ -107,16 +125,16 @@
             <div class="row">
               <div class="col-sm-6">
                 <ul>
-                  <li>Space saving features</li>
-                  <li>Fast and smooth operation</li>
-                  <li>Footrest sensor</li>
+                  <li class="text-dark">Space saving features</li>
+                  <li class="text-dark" >Fast and smooth operation</li>
+                  <li class="text-dark">Footrest sensor</li>
                 </ul>
               </div>
 
               <div class="col-sm-6">
                 <ul>
-                  <li>Auto-return footrest </li>
-                  <li>Available as a twin seat </li>
+                  <li class="text-dark">Auto-return footrest </li>
+                  <li class="text-dark">Available as a twin seat </li>
                 </ul>
               </div>
             </div>
@@ -148,15 +166,15 @@
             <div class="row">
               <div class="col-sm-6">
                 <ul>
-                  <li>No finger traps</li>
-                  <li>Multi-angled positioned backrest</li>
+                  <li class="text-dark">No finger traps</li>
+                  <li class="text-dark">Multi-angled positioned backrest</li>
                 </ul>
               </div>
 
               <div class="col-sm-6">
                 <ul>
-                  <li>Sprung seat for extra comfort</li>
-                  <li>Blow-moulded foam with tubular steel frame</li>
+                  <li class="text-dark">Sprung seat for extra comfort</li>
+                  <li class="text-dark">Blow-moulded foam with tubular steel frame</li>
                 </ul>
               </div>
             </div>
@@ -180,10 +198,10 @@
 
       <div class="container-fluid">
         <div class="theater-video">
-        <iframe width="1080" height="1020" src="https://www.youtube.com/embed/v6A2KOX5vwU" frameborder="0"
-          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
-        </iframe>
-      </div>
+          <iframe width="1080" height="1020" src="https://www.youtube.com/embed/v6A2KOX5vwU" frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+          </iframe>
+        </div>
 
         <div class="row" style="font-family: cursive sans-serif;">
           <div class="col-sm-12" style="margin: 20px; margin-top: 35px;">
@@ -191,7 +209,7 @@
           </div>
           <div class="col-md-6" style="margin-top: 35px;">
             <ul>
-              <li style="font-size: 25px; padding-right: 10%;">Moves sound all around you</li>
+              <li style="font-size: 25px; padding-right: 10%;"  class="text-dark">Moves sound all around you</li>
             </ul>
             <p style="padding-left: 5%;">
               Rather than being constrained to channels, sounds can be precisely placed and moved in three-dimensional
@@ -200,7 +218,7 @@
           </div>
           <div class="col-md-6" style="margin-top: 35px;">
             <ul>
-              <li style="font-size: 25px; padding-right: 10%;">Adds an overhead dimension</li>
+              <li style="font-size: 25px; padding-right: 10%;"  class="text-dark">Adds an overhead dimension</li>
             </ul>
             <p style="padding-left: 5%;">
               A new sensation of height immerses you in the action, creating a full audio atmosphere and realistically
@@ -209,7 +227,7 @@
           </div>
           <div class="col-md-6" style="margin-top: 35px;">
             <ul>
-              <li style="font-size: 25px; padding-right: 10%;">Produces breathtaking sound quality</li>
+              <li style="font-size: 25px; padding-right: 10%;" class="text-dark">Produces breathtaking sound quality</li>
             </ul>
             <p style="padding-left: 5%;">
               Dolby Atmos renders everything from dialogue to quiet scenes to whirlwind action with astonishing clarity,
@@ -218,7 +236,7 @@
           </div>
           <div class="col-md-6" style="margin-top: 35px;">
             <ul>
-              <li style="font-size: 25px; padding-right: 10%;">Creates a powerfully moving entertainment experience</li>
+              <li style="font-size: 25px; padding-right: 10%;" class="text-dark">Creates a powerfully moving entertainment experience</li>
             </ul>
             <p style="padding-left: 5%;">
               It all comes together in sound that excites your senses and inspires your emotions to deliver the full
@@ -227,19 +245,26 @@
           </div>
         </div>
 
+        <div class="parallax">
+          <div class="row h-100">
+            <div class="col-md-12 align-self-center">
+            </div>
+          </div>
+        </div>
+
     </article>
 
     <!--Now showing section-->
 
-    <article style="font-family: 'Times New Roman', Times, serif;" id="nowshowing">
-
-      <div class="container-fluid">
+    <div class="container-fluid">
         <div class="row">
           <div class="col-md-12" style="height: 100px;">
-          <h3 style="text-align: center; padding: 25px; font-size: 40px;" > NOW SHOWING</h3>
+            <h3 style="text-align: center; padding: 25px; font-size: 40px;"> NOW SHOWING</h3>
           </div>
         </div>
       </div>
+
+    <article style="font-family: 'Times New Roman', Times, serif; background-color: #595959;" id="nowshowing">
       <div class="container-fluid">
         <div class="row">
           <div class="col-sm-6">
@@ -257,7 +282,7 @@
                   <h1 style="font-size: 20px;">Sat 6pm</h1>
                   <h1 style="font-size: 20px;">Sun 6pm</h1>
 
-                  <button type="button" class="btn btn-light" >More detail</button>
+                  <button type="button" class="btn btn-light">More detail</button>
                 </div>
               </div>
 
@@ -278,7 +303,7 @@
                     <h1 style="font-size: 20px;">Sat 12pm</h1>
                     <h1 style="font-size: 20px;">Sun 12pm</h1>
 
-                    <button type="button" class="btn btn-light" >More detail</button>
+                    <button type="button" class="btn btn-light">More detail</button>
                   </div>
                 </div>
               </div>
@@ -299,7 +324,7 @@
                   <h1 style="font-size: 20px;">Sat 3pm</h1>
                   <h1 style="font-size: 20px;">Sun 3pm</h1>
 
-                  <button type="button" class="btn btn-light" >More detail</button>
+                  <button type="button" class="btn btn-light">More detail</button>
                 </div>
               </div>
             </div>
@@ -318,7 +343,7 @@
                   <h1 style="font-size: 20px;">Sat 9pm</h1>
                   <h1 style="font-size: 20px;">Sun 9pm</h1>
 
-                  <button type="button" class="btn btn-light" >More detail</button>
+                  <button type="button" class="btn btn-light">More detail</button>
                 </div>
               </div>
             </div>
@@ -333,7 +358,7 @@
       <div class="container-fluid">
         <div class="row">
           <div class="col-md-12" style="height: 100px;">
-          <h3 style="text-align: center; padding: 25px; font-size: 40px;" > Pricing Section</h3>
+            <h3 style="text-align: center; padding: 25px; font-size: 40px;"> Pricing Section</h3>
           </div>
         </div>
       </div>
