@@ -13,65 +13,39 @@
   <script src='../wireframe.js'></script>
   <!--import the bootstrap-->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-  <script src="https://code.jquery.com/jquery-3.5.0.js" integrity="sha256-r/AaFHrszJtwpe+tHyNi/XCfMxYpbsRg2Uqn0x3s2zc="
-    crossorigin="anonymous"></script>
-  <script>// When the user scrolls the page, execute myFunction
-    window.onscroll = function () { myFunction() };
-
-    // Get the navbar
-    var navbar = document.getElementById("navbar");
-
-    // Get the offset position of the navbar
-    var sticky = navbar.offsetTop;
-
-    // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
-    function myFunction() {
-      if (window.pageYOffset >= sticky) {
-        navbar.classList.add("sticky")
-      } else {
-        navbar.classList.remove("sticky");
-      }
-    }</script>
+  
 
 </head>
 
 <body>
-
-  <header>
-    <div class="container-fluid">
-      <div class="jumbotron text-center">
-        <h1 style="color:#ff9249">Welcome to Cinemax</h1>
-        <img src="cinemax.jpg" alt="cinemax logo" width="500">
-      </div>
+  <!--Nav bar-->
+  <nav id="navbar" class="fixed-top navbar navbar-expand-lg bg-dark navbar-dark">
+    <a class="navbar-brand" href="#"><img src="cinemax.jpg" alt="cinemax logo" width="150"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarContent">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link" href="#aboutus">About us</a></li>
+        <li class="nav-item"><a class="nav-link" href="#prices">Prices</a></li>
+        <li class="nav-item"><a class="nav-link" href="#nowshowing">Now showing</a></li>
+      </ul>
     </div>
-
-    <!--Nav bar-->
-
-      <nav id="navbar" class="fixed-top">
-        <div class="menu">
-          <ul class="nav_links">
-            <li><a href="#aboutus">About us</a></li>
-            <li><a href="#prices">Prices</a></li>
-            <li><a href="#nowshowing">Now showing</a></li>
-          </ul>
-        </div>
-      </nav>
+  </nav>
+  <header class="mt-5">
+    <div class="container-fluid mt-5 text-center">
+        <h1 style="color:#ff9249">Welcome to</h1>
+        <img src="cinemax.jpg" alt="cinemax logo" width="500">
+    </div>      
   </header>
   <main>
 
     <!--displaying About Us section with parallax effect-->
 
-    <article id="aboutus">
+    <article id="aboutus" class="mt-5">
+      <h1 class="font-weight-bold p-5 text-center bg-dark text-white">CINEMAX - WHO ARE WE</h1>
 
-      <div class="container-fluid"
-        style="margin-top: 20px; margin-bottom: 5px; border: black; color: white; background-color: black; height: 50px; text-align: center;">
-        <h1 style="font-weight: 700; font-size: 30px;">CINEMAX - WHO ARE WE</h1>
-      </div>
-
-      <div class="parallax">
+      <div class="parallax mt-5">
         <div class="row h-100">
           <div class="col-md-12 align-self-center">
             <h1 class="text-center"></h1>
@@ -79,38 +53,38 @@
         </div>
       </div>
 
-      <div class="container">
-        <p>Cinemax Cinemas is a local owned and operated independent theatre company in the Can Tho market. Cinemax
+      <div class="container row align-items-center">
+        <p class="col-lg-6">Cinemax Cinemas is a local owned and operated independent theatre company in the Can Tho market. Cinemax
           Cinemas is dedicated to providing the best movie presentation, amenities, concession products, and movie
           theatre prices around. With all digital and Real D 3D screens, Atlas Cinemas features the most diverse viewing
           options, with alternative content such as independent and foreign films, and all the best that Hollywood has
           to offer.</p>
+          <div class="col-lg-6">
         <img src="about_us_1.jpg" alt="about us">
       </div>
+      </div>
 
-      <div class="parallax">
+      <div class="parallax mt-5">
         <div class="row h-100">
           <div class="col-md-12 align-self-center">
           </div>
         </div>
       </div>
 
-      <div class="jumbotron jumbotron-fluid" style="font-family: cursive, sans-serif;">
-        <div class="container">
+        <div class="container py-5">
           <h1 class="display-4">
             BRAND NEW FIRST CLASS SEATS AVAILABLE IN ALL CINEMAS
           </h1>
-          <p class="lead">
+          <p class="lead mt-3" style="font-family: cursive, sans-serif;">
             Luxirous, Elegant, Hi-Tech, specifically designed for theatres, "Premium Milano Zero Wall" make your
             cinemetic experience to a whole new world
           </p>
         </div>
-      </div>
 
       <div class="container-fluid" style="margin-bottom: 20px;">
-        <div class="row">
+        <div class="row align-items-center">
           <div class="col-sm-6">
-            <img src="first_class.jpg" alt="">
+            <img width="100%" src="first_class.jpg" alt="">
           </div>
           <div class="col-sm-6">
             <p style="font-size: 25px;">EXTRAORIDINARY MOVIVE EXPERIENCE WITH FIRST CLASS SEATS - MILANO ZERO WALL </p>
@@ -122,22 +96,13 @@
               style and practability.</p>
             <p>This cinema seat is available as a linked, single or twin seat with a shared armrest and can be
               integrated with Ferco's range of Premium Privacy Panels. </p>
-            <div class="row">
-              <div class="col-sm-6">
                 <ul>
                   <li class="text-dark">Space saving features</li>
                   <li class="text-dark" >Fast and smooth operation</li>
                   <li class="text-dark">Footrest sensor</li>
-                </ul>
-              </div>
-
-              <div class="col-sm-6">
-                <ul>
                   <li class="text-dark">Auto-return footrest </li>
                   <li class="text-dark">Available as a twin seat </li>
-                </ul>
-              </div>
-            </div>
+                </ul> 
           </div>
         </div>
       </div>
@@ -150,9 +115,9 @@
       </div>
 
       <div class="container-fluid" style="margin-bottom: 20px;">
-        <div class="row">
+        <div class="row align-items-center">
           <div class="col-sm-6">
-            <img src="standard.jpg" alt="">
+            <img width="100%" src="standard.jpg" alt="">
           </div>
           <div class="col-sm-6">
             <p style="font-size: 25px;">OUTSTANDING MOVIES EXPERIENCE WITH OUR NEW STANDARD SEATS - PARAGON 755</p>
@@ -163,21 +128,14 @@
               differentiate their seating options.</p>
             <p>The 755 is also available as a rocker-back version, where patrons can recline the backrest to the desired
               pitch. </p>
-            <div class="row">
-              <div class="col-sm-6">
+            
                 <ul>
                   <li class="text-dark">No finger traps</li>
                   <li class="text-dark">Multi-angled positioned backrest</li>
-                </ul>
-              </div>
-
-              <div class="col-sm-6">
-                <ul>
                   <li class="text-dark">Sprung seat for extra comfort</li>
                   <li class="text-dark">Blow-moulded foam with tubular steel frame</li>
                 </ul>
-              </div>
-            </div>
+           
           </div>
         </div>
       </div>
@@ -189,12 +147,10 @@
         </div>
       </div>
 
-      <div class="jumbotron jumbotron-fluid" style="font-family: 'Courier New', Courier, monospace, sans-serif;">
-        <div class="container">
+        <div class="container my-5" style="font-family: 'Courier New', Courier, monospace, sans-serif;">
           <h1 class="display-4">DOLBY ATMOS TRANSPORT YOU INTO THE STORY WITH MOVING AUDIO THAT FLOWS ALL AROUND YOU
             WITH BREATHTAKING REALISM</h1>
         </div>
-      </div>
 
       <div class="container-fluid">
         <div class="theater-video">
@@ -203,7 +159,7 @@
           </iframe>
         </div>
 
-        <div class="row" style="font-family: cursive sans-serif;">
+        <div class="row my-5" style="font-family: cursive sans-serif;">
           <div class="col-sm-12" style="margin: 20px; margin-top: 35px;">
             <h3>Dolby Atmos Redefines Your Entertainment Experience</h3>
           </div>
@@ -255,17 +211,11 @@
     </article>
 
     <!--Now showing section-->
-
-    <div class="container-fluid">
-        <div class="row">
-          <div class="col-md-12" style="height: 100px;">
-            <h3 style="text-align: center; padding: 25px; font-size: 40px;"> NOW SHOWING</h3>
-          </div>
-        </div>
-      </div>
+   
+    <h3 class="text-center my-5"> NOW SHOWING</h3>
 
     <article style="font-family: 'Times New Roman', Times, serif; background-color: #595959;" id="nowshowing">
-      <div class="container-fluid">
+      <div class="container-flui py-4">
         <div class="row">
           <div class="col-sm-6">
             <!--Endgame poster-->
@@ -285,10 +235,10 @@
                   <button type="button" class="btn btn-light">More detail</button>
                 </div>
               </div>
-
+            </div>
               <!--Dumbo poster-->
 
-              <div class="card">
+          <div class="card">
                 <div class="row">
                   <div class="col-sm">
                     <img style="width: 250px;" src="dumbo.jpg" alt="">
@@ -307,7 +257,6 @@
                   </div>
                 </div>
               </div>
-            </div>
           </div>
 
           <div class="col-sm-6">
@@ -481,7 +430,28 @@
       Programming course at RMIT University in Melbourne, Australia.</div>
     <div><button id='toggleWireframeCSS' onclick='toggleWireframe()'>Toggle Wireframe CSS</button></div>
   </footer>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.0.js" integrity="sha256-r/AaFHrszJtwpe+tHyNi/XCfMxYpbsRg2Uqn0x3s2zc="
+    crossorigin="anonymous"></script>
+  <script>// When the user scrolls the page, execute myFunction
+    window.onscroll = function () { myFunction() };
 
+    // Get the navbar
+    var navbar = document.getElementById("navbar");
+
+    // Get the offset position of the navbar
+    var sticky = navbar.offsetTop;
+
+    // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+    function myFunction() {
+      if (window.pageYOffset >= sticky) {
+        navbar.classList.add("sticky")
+      } else {
+        navbar.classList.remove("sticky");
+      }
+    }</script>
 </body>
 
 </html>
