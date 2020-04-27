@@ -6,17 +6,6 @@
     <title>Booking Information</title>
     <script defer src="script.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script>
-    $('.form-group').on('select','.prc',function() {
-        var totalSum=0;
-        $('.form-group .prc').each(function(){
-            var inputVal=$(this).val();
-            if($.isNumeric(inputVal)){
-                totalSum +=parseFloat(inputVal);
-            }
-        });
-        $('#result').text(totalSum); })
-    </script>
 </head>
 
 <body>
@@ -76,7 +65,7 @@
             </fieldset>
             <fieldset>
                 <legend>First Class</legend>
-                <div class="form-group"></div>
+                <div class="form-group">
                 <label for="seats[FCA]">Adult</label>
                 <select id="seats-FCA" name="seats[FCA]" form="bookingform" class="form-control prc">
                     <option value="0">Please Select</option>
@@ -92,7 +81,7 @@
                     <option value="10">10</option>
                 </select>
                 </div>
-                <div class="form-group"></div>
+                <div class="form-group">
                 <label for="seats[FCP]">Concession</label>
                 <select id="seats-FCP" name="seats[FCP]" form="bookingform" class="form-control prc">
                     <option value="0">Please Select</option>
@@ -108,7 +97,7 @@
                     <option value="10">10</option>
                 </select>
                 </div>
-                <div class="form-group"></div>
+                <div class="form-group">
                 <label for="seats[FCC]">Children</label>
                 <select id="seats-FCC" name="seats[FCC]" form="bookingform" class="form-control prc">
                     <option value="0">Please Select</option>
@@ -131,26 +120,25 @@
             </div>
             <div class="form-group">
                 <label for="cust[name]">Name</label>
-                <input type="text" class="form-control" id="customer-name" value="">
+                <input type="text" name="cust[name]" class="form-control" form="bookingform"  placeholder="name">
             </div>
             <div class="form-group">
                 <label for="cust[email]">E-mail</label>
-                <input type="email" id="customer-email" value="">
+                <input type="email" name="cust[email]" form="bookingform" placeholder="e-mail">
             </div>
             <div class="form-group">
                 <label for="cust[mobile]">Mobile</label>
-                <input type="tel" id="customer-mobile" value="">
+                <input type="tel" name="cust[mobile]" form="bookingform" placeholder="phone number">
             </div>
             <div class="form-group">
                 <label for="cust[card]">Credit Card</label>
-                <input type="text" id="customer-card" value="">
+                <input type="text" name="cust[card]" form="bookingform" placeholder="credit number">
             </div>
             <div class="form-group">
                 <label for="cust[expiry]">Expiry</label>
-                <input type="month" id="customer-expiry-date" value="">
+                <input type="month" name="cust[expiry]" form="bookingform" value="">
             </div>
             <input type="submit" id="submit-form" name="order" onclick="postForm();">
-
     </form>
     </fieldset>
 </body>
