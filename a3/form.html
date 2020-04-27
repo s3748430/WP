@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Booking Information</title>
+    <script defer src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+    $('.form-group').on('select','.prc',function() {
+        var totalSum=0;
+        $('.form-group .prc').each(function(){
+            var inputVal=$(this).val();
+            if($.isNumeric(inputVal)){
+                totalSum +=parseFloat(inputVal);
+            }
+        });
+        $('#result').text(totalSum); })
+    </script>
+</head>
+
+<body>
+    <form action="https://titan.csit.rmit.edu.au/~e54061/wp/lunardo-formtest.php" method="POST" id="bookingform">
+        <fieldset>
+            Movie Title-Day-Time
+            <fieldset>
+                <legend>Standard</legend>
+                <div class="form-group">
+                    <label for="seats[STA]">Adult</label>
+                    <select id="seats-STA" name="seats[STA]" form="bookingform" class="form-control prc">
+                        <option value="0">Please Select</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="seats[STP]">Concession</label>
+                    <select id="seats-STP" name="seats[STP]" form="bookingform" class="form-control prc">
+                        <option value="0">Please Select</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="seats[STC]">Children</label>
+                    <select id="seats-STC" name="seats[STC]" form="bookingform" class="form-control prc">
+                        <option value="0">Please Select</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </select>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>First Class</legend>
+                <div class="form-group"></div>
+                <label for="seats[FCA]">Adult</label>
+                <select id="seats-FCA" name="seats[FCA]" form="bookingform" class="form-control prc">
+                    <option value="0">Please Select</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                </select>
+                </div>
+                <div class="form-group"></div>
+                <label for="seats[FCP]">Concession</label>
+                <select id="seats-FCP" name="seats[FCP]" form="bookingform" class="form-control prc">
+                    <option value="0">Please Select</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                </select>
+                </div>
+                <div class="form-group"></div>
+                <label for="seats[FCC]">Children</label>
+                <select id="seats-FCC" name="seats[FCC]" form="bookingform" class="form-control prc">
+                    <option value="0">Please Select</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                </select>
+                </div>
+            </fieldset>
+            <div class="form-group">
+                <label>Total</label>
+                <output id="result" class="form-control prc"></output>
+            </div>
+            <div class="form-group">
+                <label for="cust[name]">Name</label>
+                <input type="text" class="form-control" id="customer-name" value="">
+            </div>
+            <div class="form-group">
+                <label for="cust[email]">E-mail</label>
+                <input type="email" id="customer-email" value="">
+            </div>
+            <div class="form-group">
+                <label for="cust[mobile]">Mobile</label>
+                <input type="tel" id="customer-mobile" value="">
+            </div>
+            <div class="form-group">
+                <label for="cust[card]">Credit Card</label>
+                <input type="text" id="customer-card" value="">
+            </div>
+            <div class="form-group">
+                <label for="cust[expiry]">Expiry</label>
+                <input type="month" id="customer-expiry-date" value="">
+            </div>
+            <input type="submit" id="submit-form" name="order" onclick="postForm();">
+
+    </form>
+    </fieldset>
+</body>
+
+</html>
