@@ -1,10 +1,29 @@
-<script
-  src="https://code.jquery.com/jquery-3.5.0.js"
-  integrity="sha256-r/AaFHrszJtwpe+tHyNi/XCfMxYpbsRg2Uqn0x3s2zc="
-  crossorigin="anonymous"></script>
+// Cache selectors
+var nav = $("#top-menu"),
+    navHeight = nav.outerHeight()+15,
+    // All list items
+    navItems = topMenu.find("a"),
+    // Anchors corresponding to menu items
+    scrollItems = menuItems.map(function(){
+      var item = $($(this).attr("href"));
+      if (item.length) { return item; }
+    });
 
-  function calculatePrice() {
-      alert("Calculate Price?!")
-  }
-  var 
-  script
+// Bind to scroll
+$(window).scroll(function(){
+   // Get container scroll position
+   var fromTop = $(this).scrollTop()+navHeight;
+
+   // Get id of current scroll item
+   var cur = scrollItems.map(function(){
+     if ($(this).offset().top < fromTop)
+       return this;
+   });
+   // Get the id of the current element
+   cur = cur[cur.length-1];
+   var id = cur && cur.length ? cur[0].id : "";
+   // Set/remove active class
+   menuItems
+     .parent().removeClass("active")
+     .end().filter("[href='#"+id+"']").parent().addClass("active");
+});​
