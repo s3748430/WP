@@ -1,0 +1,58 @@
+/* import google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Lato:ital@1&family=Oswald:wght@300&family=Roboto:ital,wght@1,500&display=swap');
+
+:root{
+    --primary-color: #45ccb8;
+    --light-gray: #2b3032a1;
+    --border: #2b303219;
+    --text-color: #ff686b;
+    --roboto:"Roboto", sans-serif;
+    --lato: "Lato", cursive;
+    --oswald: "Oswald", cursive;
+}
+
+.primary-color{
+    color: var(--primary-color);
+}
+
+.bg-primary-color{
+    background-color: var(--primary-color);
+}
+
+.text-color{
+    color: var(--text-color);
+}
+
+.font-roboto{
+    font-family: var(--roboto);
+}
+
+.light-blue{
+    color: lightblue;
+}
+
+header{
+    background-color: var(--primary-color);
+    font-weight: var(--roboto);
+}
+
+header.site-title{
+    font-weight: var(--lato);
+}
+
+.header-links a {
+    font-size: 1 cm;
+    text-decoration: none;
+    color: white;
+}
+
+/*Nav bar*/
+
+.navbar-nav.nav-links{
+    font-size: 1cm;
+    color: var(--light-gray);
+}
+
+.navbar-nav.nav-item.nav-link{
+    padding: 0 1.3cm;
+}
