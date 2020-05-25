@@ -5,3 +5,6 @@ var object = new Vue({
         price: "$1.99"
     }
 })
+/**First slider */
+
+$('.slider.one').slick();
