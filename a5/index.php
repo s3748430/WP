@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -22,34 +25,25 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 
     <!--import Slick template-->
-    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>s
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 </head>
 
 <body>
     <!--Header section-->
     <header>
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-md-4 col-sm-12 col-12">
-                    <div class="btn-group">
-                        <button class="btn border dropdown-toggle my md-4-my-2 text-white" data-toggle="dropdown"
-                            aria-haspopup="true" aria-expanded="false">User
-                        </button>
-                        <div class="dropdown-menu">
-                            <a href="#" class="dropdown-menu">Admin</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 col-12 text-center">
-                    <h2 class="my-md-3 site-title text-white">Our Store</h2>
-                </div>
-                <div class="col-md-4 col-12 text-right">
-                    <p class="my-md-4 header-links">
-                        <a href="#" class="px-2">Sign in</a>
-                        <a href="#" class="px-1">Create an account</a>
-                    </p>
-                </div>
+        <div class="container d-flex py-3 align-items-center">
+            <h2 class="text-white">Our Store</h2>
+            <div class="ml-auto">
+            <?php if(!isset($_SESSION['LoginUser'])) {?>
+                <a href="login.php" class="px-2 text-white">Sign in</a>
+                <a href="#" class="px-1 text-white">Create an account</a>
+            <?php } else { ?>
+                <form class="form-inline" method="post" action="logout.php">
+                    <div class="text-light mr-3"><?php echo $_SESSION['LoginUser'];?></div>
+                    <button name="submit" class="btn btn-outline-light" type="submit">Logout</button>
+                </form>
+            <?php } ?>
             </div>
         </div>
         <!--Navigation menu-->
@@ -108,7 +102,7 @@
             </div>
         </div>
     </main>
-
+    <?php echo $_SESSION['LoginUser'];?>
 
     <script type="text/javascript" src="slick/slick.min.js"></script>
 </body>
